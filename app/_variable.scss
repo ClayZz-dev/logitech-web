@@ -1,0 +1,75 @@
+// some variables that i need
+$mainFont : 'Poppins', sans-serif;
+$fontHeader :'Bebas Neue', cursive;
+$darkColor : #1D1D1D;
+$semiDarkColor : #2A2A2A;
+$mainColor : #16AAEA;
+$transitionHoverBg : background-color 0.6s ease;
+$transitionEffectSlow :0.6s ease;
+$transitionEffectFast :0.3s ease;
+
+@mixin fontStyle($fontSize) {
+    font-size: $fontSize;
+    text-decoration: none;
+    list-style: none;
+    font-family: $mainFont;
+}
+
+@mixin centerElement {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin button{
+    width: 120px;
+    height: 32px;
+    line-height: 29px;
+    text-align: center;
+    border-radius: 2px;
+    cursor: pointer;
+    font-weight: 400;
+}
+
+
+// animation
+@keyframes fadeInSideLeft {
+    from {
+        transform: translateX(-100px);
+        opacity: 0;
+    } to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+@keyframes fadeInSideRight {
+    from {
+        transform: translateX(100px);
+        opacity: 0;
+    } to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        transform: translateY(-100px);
+        opacity: 0;
+    } to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade {
+    from {
+        transform: translateY(-10px);
+        opacity: 0;
+    } to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

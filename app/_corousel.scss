@@ -1,0 +1,107 @@
+@import "variable";
+
+.slide-cont {
+    height: 125vh;
+    background-color: red;
+}
+
+.slider-container {
+    height: 125vh;
+    position: relative;
+    display: flex;
+}
+
+
+//arrow for navigation
+.arrow-cont {
+    position: relative;
+    top: 45%;
+    width: 100%;
+    z-index: 1;
+
+    #arrow-left {
+        position: absolute;
+        left: 6vw;
+        cursor: pointer;
+    }
+
+    #arrow-right {
+        position: absolute;
+        right: 6vw;
+        cursor: pointer;
+        transform: rotateY(180deg)
+    }
+}
+
+.slide {
+    @include fontStyle(1em);
+
+    position: relative;
+    width: 100vw;
+    height: 100%;
+    color: $darkColor;
+    background-color: white;
+    padding-bottom: 5vh;
+}
+
+.slide-content-cont {
+   width: 75%;
+   height: 100%;
+   margin: auto;
+   text-align: center; 
+   display: grid;
+   place-items: center;
+}
+
+.slide-img-cont {
+        width: 210px;
+        margin: auto;
+        height: 210px;
+        position: relative;
+        top: 20%;
+    .img {
+        width: inherit;
+        height: inherit;
+        border-radius: 140px;
+        background-color: $darkColor;
+    }
+}
+
+.slide-text-cont {
+    width: 75%;
+    position: relative;
+    top: -10%;
+    .slide-header {
+        margin: 10px 0 0 0;
+    }
+
+    .slide-paragraph {
+        margin-bottom: 30px;
+    }
+}
+
+.slide-button {
+    .button-one {
+        color: white;
+        background-color: $mainColor;
+        border: 2px solid $mainColor;
+        transition: $transitionEffectFast;
+
+        &:hover {
+            color: $mainColor;
+            background-color: white;
+        }
+    }
+
+    .button-two {
+        border: 2px solid $darkColor;
+        transition: $transitionEffectFast;
+
+        &:hover {
+            background-color: $darkColor;
+            color: white;
+        }
+    }
+}
+
+

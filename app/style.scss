@@ -1,0 +1,177 @@
+@import "variable";
+@import "corousel";
+@import "prod";
+
+// reset
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $darkColor;
+    color: white;
+}
+
+
+//navbar
+nav {
+    @include centerElement();
+
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 12vh;
+    padding: 10px 12px 0 12px;
+}
+
+
+.logo-cont {
+    @include centerElement();
+    position: relative;
+    left: 7vw;
+    height: inherit;
+
+
+    .logo-img{
+        margin-right: 5px;
+        img {
+            width: 40px;
+        }
+    }
+
+    .logo-text {
+        @include fontStyle(0.9rem);
+    }
+}
+
+
+//all nav items
+.nav-items {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    li {
+        list-style: none;
+        margin: 0 1.4vw;
+        cursor: pointer;
+        a {
+            @include fontStyle(0.8em);
+            color: white;
+            letter-spacing: 1px;
+        }
+    }
+
+    //sign in button
+    .special {
+        @include button();
+        width: 103px;
+        border: 1px solid white;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            a {
+                color: $darkColor;
+            }
+            background-color: white;
+            border: 1px solid white;
+        }
+    }
+}
+
+//content
+.content-container {
+    @include centerElement();
+    width: 80%;
+    margin: auto;
+}
+//text content
+
+.header {
+    @include fontStyle(1.9rem);
+    margin-bottom: 15px;
+    h4 {
+        color: #A9A9A9;
+        font-size: 1rem;
+        font-weight: 300;
+        width: 50%;
+    }
+}
+
+.content-prgph {
+    @include fontStyle (13px);
+    width: 50%;
+}
+
+//content button and price style
+.content-button{   
+    @include fontStyle(1em);
+
+    margin-top: 10px;
+
+    .price {
+        font-size: 1.3em;
+        color: $mainColor;
+        margin-bottom: 14px;
+    }
+}
+
+
+//content button
+.button {
+    @include button();
+    font-family: $mainFont;
+    font-size: 0.8em;
+    display: inline-block;
+}
+
+.buyNow {
+    transition: $transitionEffectFast;
+    background-color: $mainColor;
+    border: 2px solid $mainColor;
+    color: $darkColor;
+    margin-right: 15px;
+
+    &:hover {
+        color: $mainColor;
+        background-color: $darkColor;
+    }
+}
+
+.seeMore {
+    transition: $transitionEffectFast;
+    border: 2px solid white;
+
+    &:hover {
+        color: $darkColor;
+        background-color: white;
+    }
+}
+
+//image content
+.content-image {
+    img {
+        width: 320px;
+    }
+}
+
+
+
+// animation style
+
+.fadeInLeft {
+    animation: fadeInSideLeft 1.5s;
+    opacity: 1;
+}
+
+.fadeIn {
+    animation: fadeIn 1.5s;
+    opacity: 1;
+}
+
+.fade {
+    animation: fade 1s;
+    opacity: 1;
+}
